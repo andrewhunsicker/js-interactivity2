@@ -26,6 +26,7 @@ inputField.vaule = ``
 const deleteMovie = (event) => {
     event.target.parentNode.remove()
     message.textContent = `Movie deleted!`
+    revealMessage()
 }
 
 const crossOffMovie= (event) => {
@@ -35,9 +36,17 @@ const crossOffMovie= (event) => {
     }else{
         message.textContent = `Movie re-added`
     }
+    revealMessage()
 }
 
+const revealMessage = () => {  
+    message.classList.remove(`hide`)
+       setTimeout(() => {
+     message.classList.add(`hide`)
+     }, 1000); }
+    
 
+    
 
 
 
